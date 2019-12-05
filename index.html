@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Random Action Generator</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+
+    <div id="quote"></div>
+    <script>
+      (function() {
+        var quotes = [
+          {
+            text: "Throw",
+            img: "throw.png" 
+          },
+          {
+            text: "Put",
+            img: "put.png"
+          },
+          {
+            text: "Drop",
+            img: "drop.png"
+          }
+        ];
+        var quote = quotes[Math.floor(Math.random() * quotes.length)];
+        document.getElementById("quote").innerHTML =
+          '<img src="' + quote.img + '">' + "<p>" + quote.text + "</p>";
+      })();
+    </script>
+
+    <div id="footer">
+      <a href="entities.html">
+        <img
+          src="entity.png"
+          alt="HTML tutorial"
+          style="align-self: flex-end;"
+        />
+      </a>
+    </div>
+  </body>
+</html>

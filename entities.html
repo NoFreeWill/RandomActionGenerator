@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Random Entities</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+
+    <br />
+
+    <div id="quote"></div>
+    <script>
+      (function() {
+        var quotes = [
+          {
+            text: "Stick",
+            img: "stick.png"
+          },
+          {
+            text: "Rock",
+            img: "rock.png"
+          },
+          {
+            text: "Leaf",
+            img: "leaf.png"
+          }
+        ];
+        var quote = quotes[Math.floor(Math.random() * quotes.length)];
+        document.getElementById("quote").innerHTML =
+          '<img src="' + quote.img + '">' + "<p>" + quote.text + "</p>";
+      })();
+    </script>
+
+<div id="footer">
+    <a href="places.html">
+      <img
+        src="place.png"
+        alt="HTML tutorial"
+        style="align-self: flex-end;"
+      />
+    </a>
+
+  </body>
+</html>

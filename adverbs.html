@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Random Adverbs</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div id="quote"></div>
+    <script>
+      (function() {
+        var quotes = [
+          {
+            text: "Gracefully",
+            img: "none.png"
+          },
+          {
+            text: "Rapidly",
+            img: "none.png"
+          },
+          {
+            text: "Forcefully",
+            img: "none.png"
+          },
+          {
+            text: "Carefully",
+            img: "none.png"
+          },
+          {
+            text: "Gently",
+            img: "none.png"
+          },
+          {
+            text: "Sneakily",
+            img: "none.png"
+          },
+          {
+            text: "Conspicuously",
+            img: "none.png"
+          }
+        ];
+        var quote = quotes[Math.floor(Math.random() * quotes.length)];
+        document.getElementById("quote").innerHTML =
+          '<img src="' + quote.img + '">' + "<p>" + quote.text + "</p>";
+      })();
+    </script>
+
+<div id="footer">
+    <a href="index.html">
+      <img
+        src="action.png"
+        alt="HTML tutorial"
+        style="align-self: flex-end;"
+      />
+    </a>
+  </body>
+</html>
